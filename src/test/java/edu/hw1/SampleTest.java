@@ -19,4 +19,10 @@ public class SampleTest {
             .containsExactly(2, 4)
             .hasSize(2);
     }
+
+    @Test
+    @DisplayName("Все тесты")
+    void runAllTests() {
+        new Task2Test().DigitsCounterTest();
+    }
 }
