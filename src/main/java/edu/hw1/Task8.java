@@ -1,7 +1,7 @@
 package edu.hw1;
 
 public final class Task8 {
-    private final static int[][] knightShift
+    private final static int[][] KNIGHT_SHIFTS
             = new int[][]
             {
                     {1, 2}, {1, -2},
@@ -9,16 +9,16 @@ public final class Task8 {
                     {2, 1}, {2, -1},
                     {-2, 1}, {2, -1}
             };
-    private final static int chessBoardSize = 8;
+    private final static int CHESS_BOARD_SIZE = 8;
 
     private Task8() {
     }
 
     public static boolean knightBoardCapture(int[][] board) {
-        for (int i = 0; i < chessBoardSize; ++i) {
-            for (int j = 0; j < chessBoardSize; ++j) {
-                if (board[i][j] == 1 &&
-                        isKnightBeatOtherKnight(board, i, j)) {
+        for (int i = 0; i < CHESS_BOARD_SIZE; ++i) {
+            for (int j = 0; j < CHESS_BOARD_SIZE; ++j) {
+                if (board[i][j] == 1
+                        && isKnightBeatOtherKnight(board, i, j)) {
                     return false;
                 }
             }
@@ -28,7 +28,7 @@ public final class Task8 {
     }
 
     private static boolean isKnightBeatOtherKnight(int[][] board, int x, int y) {
-        for (int[] knightShifts : knightShift) {
+        for (int[] knightShifts : KNIGHT_SHIFTS) {
             int xShift = knightShifts[0];
             int yShift = knightShifts[1];
 
@@ -45,6 +45,6 @@ public final class Task8 {
 
     private static boolean isRightPosition(int x, int y) {
         return x >= 0 && y >= 0
-                && x < chessBoardSize && y < chessBoardSize;
+                && x < CHESS_BOARD_SIZE && y < CHESS_BOARD_SIZE;
     }
 }

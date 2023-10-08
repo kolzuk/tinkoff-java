@@ -1,13 +1,16 @@
 package edu.hw1;
 
 public final class Task7 {
+    private static final int MAX_INT_BIT_SIZE = 32;
+
     private Task7() {
     }
 
-    public static int rotateLeft(int num, int shift) {
+    public static int rotateLeft(int n, int shift) {
+        int num = n;
         int maxNumberSize = 1;
         int numBitSize = 1;
-        while (maxNumberSize <= num && numBitSize < 32) {
+        while (maxNumberSize <= num && numBitSize < MAX_INT_BIT_SIZE) {
             maxNumberSize *= 2;
             numBitSize++;
         }
@@ -26,10 +29,11 @@ public final class Task7 {
         return num;
     }
 
-    public static int rotateRight(int num, int shift) {
+    public static int rotateRight(int n, int shift) {
+        int num = n;
         int maxNumberSize = 1;
         int numBitSize = 0;
-        while (maxNumberSize <= num && numBitSize < 32) {
+        while (maxNumberSize <= num && numBitSize < MAX_INT_BIT_SIZE) {
             maxNumberSize *= 2;
             numBitSize++;
         }

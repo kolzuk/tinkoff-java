@@ -4,7 +4,8 @@ public final class Task5 {
     private Task5() {
     }
 
-    public static boolean isPalindromeDescendant(int num) {
+    public static boolean isPalindromeDescendant(int n) {
+        int num = n;
         while (!isPalindrome(num) && Task2.countDigits(num) >= 2) {
             num = getDescendant(num);
         }
@@ -12,7 +13,8 @@ public final class Task5 {
         return isPalindrome(num) && Task2.countDigits(num) >= 2;
     }
 
-    public static boolean isPalindrome(int num) {
+    public static boolean isPalindrome(int number) {
+        int num = number;
         if (num == 0) {
             return true;
         }

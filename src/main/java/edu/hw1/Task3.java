@@ -3,7 +3,7 @@ package edu.hw1;
 import java.util.Objects;
 
 public final class Task3 {
-    Task3() {
+    private Task3() {
     }
 
     public static boolean isNestable(int[] firstArray, int[] secondArray) {
