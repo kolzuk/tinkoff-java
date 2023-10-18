@@ -13,9 +13,20 @@ public final class Task1 {
 
         int colonPosition = videoLength.indexOf(':');
 
-        String minutes = videoLength.substring(0, colonPosition);
-        String second = videoLength.substring(colonPosition + 1);
+        String[] videoPieces = videoLength.split(":");
 
+        if (videoPieces.length != 2) {
+            return -1;
+        }
+
+        String minutes = videoPieces[0];
+        String second = videoPieces[1];
+
+        // Negative is checking too
+        if (!minutes.matches("[0-9]+")
+                || !second.matches("[0-9]+")) {
+            return -1;
+        }
         int iMinutes = Integer.parseInt(minutes);
         int iSeconds = Integer.parseInt(second);
 

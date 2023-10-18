@@ -13,7 +13,7 @@ public final class Task4 {
 
         char[] chars = s.toCharArray();
 
-        for (int i = 0; i < n - n % 2; i += 2) {
+        for (int i = 0; i < n - 1; i += 2) {
             char tmp = chars[i];
             chars[i] = chars[i + 1];
             chars[i + 1] = tmp;

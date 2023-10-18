@@ -33,5 +33,8 @@ public class Task1Test {
 
         assertThat(Task1.minutesToSeconds("05:60"))
                 .isEqualTo(-1);
+
+        assertThat((Task1.minutesToSeconds("-100:20")))
+                .isEqualTo(-1);
     }
 }
