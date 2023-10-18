@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public final class Task1 {
     private static final int SECONDS_PER_MINUTE = 60;
+    private static final String NUM_REGEX = "[0-9]+";
 
     private Task1() {
     }
@@ -23,8 +24,8 @@ public final class Task1 {
         String second = videoPieces[1];
 
         // Negative is checking too
-        if (!minutes.matches("[0-9]+")
-                || !second.matches("[0-9]+")) {
+        if (!minutes.matches(NUM_REGEX)
+                || !second.matches(NUM_REGEX)) {
             return -1;
         }
         int iMinutes = Integer.parseInt(minutes);

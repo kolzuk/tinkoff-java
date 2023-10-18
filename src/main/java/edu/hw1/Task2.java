@@ -1,6 +1,8 @@
 package edu.hw1;
 
 public final class Task2 {
+    private static final int NUMBER_BASE = 10;
+
     private Task2() {
     }
 
@@ -9,7 +11,7 @@ public final class Task2 {
 
         int ans = 0;
         do {
-            num /= 10;
+            num /= NUMBER_BASE;
             ans++;
         } while (num != 0);
 
