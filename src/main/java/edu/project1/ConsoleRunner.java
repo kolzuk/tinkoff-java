@@ -22,7 +22,7 @@ public class ConsoleRunner {
         && !gameManager.isVictory()) {
             String input = readInput();
 
-            GameState response = GameRunner.nextMove(input, gameManager);
+            GameState response = GameManager.nextMove(input, gameManager);
 
             switch (response) {
                 case WRONG_INPUT:

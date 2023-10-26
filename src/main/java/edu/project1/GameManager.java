@@ -4,6 +4,7 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 
 public class GameManager {
+    private static final String GAME_STOP_COMMAND = "STOP";
     private @NotNull String answer;
     private int countOfFailAttempts;
     private final int maximumAttempts;
@@ -39,6 +40,22 @@ public class GameManager {
         }
 
         return isGuessed;
+    }
+
+    public static GameState nextMove(String input, GameManager gameManager) {
+        if (input.equals(GAME_STOP_COMMAND)) {
+            return GameState.END;
+        }
+
+        if (input.length() != 1) {
+            return GameState.WRONG_INPUT;
+        }
+
+        if (gameManager.isGuessed(input.charAt(0))) {
+            return GameState.HIT;
+        } else {
+            return GameState.MISSED;
+        }
     }
 
     public String getCurrentWord() {

@@ -73,10 +73,10 @@ public class SampleTest {
     public void Test3() {
         GameManager gameManager = new GameManager("itmo");
 
-        assertThat(GameRunner.nextMove("asd", gameManager))
+        assertThat(GameManager.nextMove("asd", gameManager))
                 .isEqualTo(GameState.WRONG_INPUT);
 
-        assertThat(GameRunner.nextMove("", gameManager))
+        assertThat(GameManager.nextMove("", gameManager))
                 .isEqualTo(GameState.WRONG_INPUT);
 
         assertThat(gameManager.getCountOfAttempts())
