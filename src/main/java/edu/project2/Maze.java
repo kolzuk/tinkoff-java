@@ -58,11 +58,11 @@ public class Maze {
     }
 
     public void print() {
-        var maze = printableMaze();
+        var printableMaze = printableMaze();
 
-        for (int i = 0; i < maze.length; ++i) {
-            for (int j = 0; j < maze[0].length; ++j) {
-                System.out.print(maze[i][j]);
+        for (int i = 0; i < printableMaze.length; ++i) {
+            for (int j = 0; j < printableMaze[0].length; ++j) {
+                System.out.print(printableMaze[i][j]);
             }
             System.out.println();
         }
