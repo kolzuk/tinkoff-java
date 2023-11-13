@@ -1,6 +1,7 @@
 package edu.project2;
 
 import edu.project2.generators.EllerGenerator;
+import edu.project2.generators.SidewinderGenerator;
 import edu.project2.passers.IdealMazePasser;
 
 public class Main {
