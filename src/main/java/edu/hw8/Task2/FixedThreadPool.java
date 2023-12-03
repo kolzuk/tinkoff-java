@@ -1,6 +1,5 @@
 package edu.hw8.Task2;
 
-import java.util.ArrayDeque;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
